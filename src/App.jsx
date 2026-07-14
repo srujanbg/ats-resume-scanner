@@ -331,7 +331,7 @@ export default function AtsScanner() {
         .ats-mono { font-family: 'IBM Plex Mono', monospace; }
         **Part 2 of 3 — paste this right after Part 1 (same box, keep going):**
 
-```javascript
+
         @keyframes sweep {
           0% { top: -6%; opacity: 0; }
           8% { opacity: 1; }
@@ -393,7 +393,7 @@ export default function AtsScanner() {
           .ats-page-pad { padding: 28px 14px 48px !important; }
           .ats-h1 { font-size: 30px !important; }
         }
-      `}</style>
+      }</style>
 
       <div className="ats-root" style={styles.container}>
         <div style={styles.eyebrow} className="ats-mono">RESUME · JOB DESCRIPTION · MATCH</div>
@@ -546,7 +546,7 @@ export default function AtsScanner() {
                 <div className="ats-mono" style={styles.kwList}>
                   {result.missing.length === 0 && <div style={styles.kwEmpty}>Nothing missing — excellent coverage.</div>}
                   {result.missing.map((t, i) => (
-                    <div className="kw-row" key={t} style={{ ...styles.kwRow, animationDelay: `${i * 0.04}s` }}>
+                    <div className="kw-row" key={t} style={{ ...styles.kwRow, animationDelay: ${i * 0.04}s }}>
                       <span style={{ color: "#B34A3A" }}>✕</span> {t}
                     </div>
                   ))}
@@ -670,19 +670,12 @@ export default function AtsScanner() {
     </div>
   );
 }
-
 const styles = {
   page: {
     minHeight: "100%",
     background: "#10151C",
     padding: "48px 20px 64px",
-    display: "flex",
-```
-
-**Say "Next" for Part 3 (the final part).**
-**Part 3 of 3 — final part, paste right after Part 2:**
-
-```javascript
+    display: "fl",
     justifyContent: "center",
   },
   container: { width: "100%", maxWidth: 860 },
@@ -1026,6 +1019,3 @@ const styles = {
     marginTop: 8,
   },
 };
-```
-
-That's the complete file — now scroll up, tap **Commit changes**, then confirm. Once that's done, check Vercel's Deployments tab to make sure it redeploys and builds successfully, then try uploading a PDF resume to test both new features.
