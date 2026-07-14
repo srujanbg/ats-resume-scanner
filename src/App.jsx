@@ -329,8 +329,6 @@ export default function AtsScanner() {
         .ats-root { font-family: 'IBM Plex Sans', sans-serif; }
         .ats-display { font-family: 'IBM Plex Sans Condensed', sans-serif; letter-spacing: -0.01em; }
         .ats-mono { font-family: 'IBM Plex Mono', monospace; }
-        **Part 2 of 3 — paste this right after Part 1 (same box, keep going):**
-
 
         @keyframes sweep {
           0% { top: -6%; opacity: 0; }
@@ -393,7 +391,7 @@ export default function AtsScanner() {
           .ats-page-pad { padding: 28px 14px 48px !important; }
           .ats-h1 { font-size: 30px !important; }
         }
-      }</style>
+      `}</style>
 
       <div className="ats-root" style={styles.container}>
         <div style={styles.eyebrow} className="ats-mono">RESUME · JOB DESCRIPTION · MATCH</div>
@@ -531,7 +529,7 @@ export default function AtsScanner() {
                 <div className="ats-mono" style={styles.kwList}>
                   {result.matched.length === 0 && <div style={styles.kwEmpty}>No terms matched yet.</div>}
                   {result.matched.map((t, i) => (
-                    <div className="kw-row" key={t} style={{ ...styles.kwRow, animationDelay:${i * 0.04}s }}>
+                    <div className="kw-row" key={t} style={{ ...styles.kwRow, animationDelay: `${i * 0.04}s` }}>
                       <span style={{ color: "#3E8E7E" }}>✓</span> {t}
                     </div>
                   ))}
@@ -546,7 +544,7 @@ export default function AtsScanner() {
                 <div className="ats-mono" style={styles.kwList}>
                   {result.missing.length === 0 && <div style={styles.kwEmpty}>Nothing missing — excellent coverage.</div>}
                   {result.missing.map((t, i) => (
-                    <div className="kw-row" key={t} style={{ ...styles.kwRow, animationDelay: ${i * 0.04}s }}
+                    <div className="kw-row" key={t} style={{ ...styles.kwRow, animationDelay: `${i * 0.04}s` }}>
                       <span style={{ color: "#B34A3A" }}>✕</span> {t}
                     </div>
                   ))}
@@ -670,12 +668,13 @@ export default function AtsScanner() {
     </div>
   );
 }
+
 const styles = {
   page: {
     minHeight: "100%",
     background: "#10151C",
     padding: "48px 20px 64px",
-    display: "fl",
+    display: "flex",
     justifyContent: "center",
   },
   container: { width: "100%", maxWidth: 860 },
