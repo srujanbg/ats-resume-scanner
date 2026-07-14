@@ -546,7 +546,7 @@ export default function AtsScanner() {
                 <div className="ats-mono" style={styles.kwList}>
                   {result.missing.length === 0 && <div style={styles.kwEmpty}>Nothing missing — excellent coverage.</div>}
                   {result.missing.map((t, i) => (
-                    <div className="kw-row" key={t} style={{ ...styles.kwRow, animationDelay: `${i * 0.04}s` }}
+                    <div className="kw-row" key={t} style={{ ...styles.kwRow, animationDelay: ${i * 0.04}s }}
                       <span style={{ color: "#B34A3A" }}>✕</span> {t}
                     </div>
                   ))}
