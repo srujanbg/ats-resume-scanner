@@ -531,7 +531,7 @@ export default function AtsScanner() {
                 <div className="ats-mono" style={styles.kwList}>
                   {result.matched.length === 0 && <div style={styles.kwEmpty}>No terms matched yet.</div>}
                   {result.matched.map((t, i) => (
-                    <div className="kw-row" key={t} style={{ ...styles.kwRow, animationDelay: `${i * 0.04}s` }}>
+                    <div className="kw-row" key={t} style={{ ...styles.kwRow, animationDelay:${i * 0.04}s }}>
                       <span style={{ color: "#3E8E7E" }}>✓</span> {t}
                     </div>
                   ))}
