@@ -17,3 +17,4 @@ A resume-vs-job-description match scorer with a Razorpay-powered "Pro" unlock (u
 ```bash
 npm install
 npm run dev
+
